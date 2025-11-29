@@ -1,0 +1,1 @@
+package com.toolvault.reporting_service.controller; import org.springframework.web.bind.annotation.*; import org.springframework.http.ResponseEntity; @RestController @RequestMapping("/reporting_service") public class MainController { @GetMapping("/ping") public ResponseEntity<String> ping() { return ResponseEntity.ok("pong"); } }

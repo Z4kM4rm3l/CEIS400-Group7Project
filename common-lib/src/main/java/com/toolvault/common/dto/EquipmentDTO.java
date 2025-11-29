@@ -1,0 +1,1 @@
+package com.toolvault.common.dto; public class EquipmentDTO { private Long id; private String name; private String barcode; private String condition; }

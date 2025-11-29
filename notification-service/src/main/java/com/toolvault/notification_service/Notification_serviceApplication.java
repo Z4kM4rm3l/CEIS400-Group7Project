@@ -1,0 +1,1 @@
+package com.toolvault.notification_service; import org.springframework.boot.SpringApplication; import org.springframework.boot.autoconfigure.SpringBootApplication; @SpringBootApplication public class Notification_serviceApplication { public static void main(String[] args) { SpringApplication.run(Notification_serviceApplication.class, args); } }

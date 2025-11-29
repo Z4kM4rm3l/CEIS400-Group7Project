@@ -1,0 +1,1 @@
+package com.toolvault.common.security; public enum Role { WORKER, SUPERVISOR, ADMIN }

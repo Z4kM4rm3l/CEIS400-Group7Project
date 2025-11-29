@@ -1,0 +1,1 @@
+package com.toolvault.common.util; public class CryptoService { public byte[] encrypt(byte[] plaintext){return plaintext;} public byte[] decrypt(byte[] ciphertext){return ciphertext;} }

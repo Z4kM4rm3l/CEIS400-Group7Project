@@ -1,0 +1,1 @@
+package com.toolvault.identity_service.controller; import org.springframework.web.bind.annotation.*; import org.springframework.http.ResponseEntity; @RestController @RequestMapping("/identity_service") public class MainController { @GetMapping("/ping") public ResponseEntity<String> ping() { return ResponseEntity.ok("pong"); } }

@@ -1,0 +1,1 @@
+package com.toolvault.depot_ops_service.controller; import org.springframework.web.bind.annotation.*; import org.springframework.http.ResponseEntity; @RestController @RequestMapping("/depot_ops_service") public class MainController { @GetMapping("/ping") public ResponseEntity<String> ping() { return ResponseEntity.ok("pong"); } }

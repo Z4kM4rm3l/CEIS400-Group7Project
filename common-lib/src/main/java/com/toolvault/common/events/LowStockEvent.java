@@ -1,0 +1,1 @@
+package com.toolvault.common.events; public class LowStockEvent { private String sku; private String warehouseCode; private int currentQty; private int reorderPoint; }

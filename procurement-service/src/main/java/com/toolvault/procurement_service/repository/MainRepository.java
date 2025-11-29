@@ -1,0 +1,1 @@
+package com.toolvault.procurement_service.repository; import org.springframework.data.jpa.repository.JpaRepository; public interface MainRepository extends JpaRepository<Object, Long> { }

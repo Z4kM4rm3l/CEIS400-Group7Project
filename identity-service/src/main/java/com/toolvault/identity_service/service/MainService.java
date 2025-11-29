@@ -1,0 +1,1 @@
+package com.toolvault.identity_service.service; public class MainService { public void doSomething() { /* TODO */ } }
