@@ -140,5 +140,51 @@ jobs:
 
 ---
 
+## How to Submit via GitHub
+1. Create a repo on GitHub (private or public).
+2. From project root:
+```bash
+git init
+git add .
+git commit -m "ToolVault skeleton"
+git branch -M main
+git remote add origin https://github.com/<your-username>/<repo-name>.git
+git push -u origin main
+```
+3. Share the repository URL with your professor.
+
+---
+
+## Using GitHub for Versions (Architecture vs Completed Code)
+Yes—use **branches, tags, and releases**:
+- **Branching:**
+  - `main` → holds stable code.
+  - `skeleton` → initial architecture-only version.
+  - Feature branches → e.g., `feature/identity-mfa`, `feature/kafka-integrations`.
+- **Tags:**
+  - Tag the skeleton milestone: `v0.1.0-skeleton`.
+- **Releases:**
+  - Create a GitHub Release for the skeleton; later create `v1.0.0` for completed code.
+
+**Workflow example:**
+```bash
+# Create skeleton branch and push
+git checkout -b skeleton
+git push -u origin skeleton
+
+# Tag the skeleton state
+git tag v0.1.0-skeleton
+git push origin v0.1.0-skeleton
+
+# Merge completed features into main later and tag release
+git checkout main
+# ... merge PRs ...
+git tag v1.0.0
+git push origin v1.0.0
+```
+This gives your professor a clear view of the baseline architecture and your subsequent completed implementation.
+
+---
+
 ## Contact
 Questions or issues? Open an Issue on the repository.

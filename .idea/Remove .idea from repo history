@@ -1,6 +1,0 @@
-# Stop tracking any previously committed IDE files
-git rm -r --cached .idea
-git rm --cached *.iml
-
-git commit -m "chore: remove IntelliJ project files from version control"
-git push
