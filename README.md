@@ -99,20 +99,23 @@ Identity service includes a basic Spring Security config that permits Swagger/Ac
 ## CI/CD
 GitHub Actions workflow (`.github/workflows/ci.yml`) builds the project on pushes and PRs:
 ```yaml
-name: CI
+name: Maven CI
 on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: 'maven'
-      - name: Build & Test
-        run: mvn -q -B clean verify
+      - name: Build with Maven
+        run: mvn -U -nsu clean install
+      - name: Run tests
+        run: mvn test
+ 
 ```
 
 ---
