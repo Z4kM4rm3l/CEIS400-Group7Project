@@ -151,12 +151,8 @@ git branch -M main
 git remote add origin https://github.com/<your-username>/<repo-name>.git
 git push -u origin main
 ```
-3. Share the repository URL with your professor.
-
----
-
 ## Using GitHub for Versions (Architecture vs Completed Code)
-Yes—use **branches, tags, and releases**:
+Use **branches, tags, and releases**:
 - **Branching:**
   - `main` → holds stable code.
   - `skeleton` → initial architecture-only version.
@@ -182,7 +178,7 @@ git checkout main
 git tag v1.0.0
 git push origin v1.0.0
 ```
-This gives your professor a clear view of the baseline architecture and your subsequent completed implementation.
+This gives a clear view of the baseline architecture and the subsequent completed implementations.
 
 ---
 
