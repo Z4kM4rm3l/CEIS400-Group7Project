@@ -1,0 +1,6 @@
+com\toolvault\identity_service\controller\MainController.class
+com\toolvault\identity_service\Identity_serviceApplication.class
+com\toolvault\identity_service\repository\MainRepository.class
+com\toolvault\identity_service\service\MainService.class
+com\toolvault\identity_service\config\OpenApiConfig.class
+com\toolvault\identity_service\domain\MainEntity.class

@@ -99,20 +99,23 @@ Identity service includes a basic Spring Security config that permits Swagger/Ac
 ## CI/CD
 GitHub Actions workflow (`.github/workflows/ci.yml`) builds the project on pushes and PRs:
 ```yaml
-name: CI
+name: Maven CI
 on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: 'maven'
-      - name: Build & Test
-        run: mvn -q -B clean verify
+      - name: Build with Maven
+        run: mvn -U -nsu clean install
+      - name: Run tests
+        run: mvn test
+ 
 ```
 
 ---
@@ -151,12 +154,8 @@ git branch -M main
 git remote add origin https://github.com/<your-username>/<repo-name>.git
 git push -u origin main
 ```
-3. Share the repository URL with your professor.
-
----
-
 ## Using GitHub for Versions (Architecture vs Completed Code)
-Yes—use **branches, tags, and releases**:
+Use **branches, tags, and releases**:
 - **Branching:**
   - `main` → holds stable code.
   - `skeleton` → initial architecture-only version.
@@ -182,7 +181,7 @@ git checkout main
 git tag v1.0.0
 git push origin v1.0.0
 ```
-This gives your professor a clear view of the baseline architecture and your subsequent completed implementation.
+This gives a clear view of the baseline architecture and the subsequent completed implementations.
 
 ---
 
