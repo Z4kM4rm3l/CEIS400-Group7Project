@@ -1,6 +1,13 @@
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\reporting-service\src\main\java\com\toolvault\reporting_service\client\DepotClient.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\reporting-service\src\main\java\com\toolvault\reporting_service\client\WarehouseClient.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\reporting-service\src\main\java\com\toolvault\reporting_service\config\JwtAuthFilter.java
 C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\reporting-service\src\main\java\com\toolvault\reporting_service\config\OpenApiConfig.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\reporting-service\src\main\java\com\toolvault\reporting_service\config\SecurityConfig.java
 C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\reporting-service\src\main\java\com\toolvault\reporting_service\controller\MainController.java
-C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\reporting-service\src\main\java\com\toolvault\reporting_service\domain\MainEntity.java
-C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\reporting-service\src\main\java\com\toolvault\reporting_service\Reporting_serviceApplication.java
-C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\reporting-service\src\main\java\com\toolvault\reporting_service\repository\MainRepository.java
-C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\reporting-service\src\main\java\com\toolvault\reporting_service\service\MainService.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\reporting-service\src\main\java\com\toolvault\reporting_service\controller\ReportController.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\reporting-service\src\main\java\com\toolvault\reporting_service\dto\DepotActivityDto.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\reporting-service\src\main\java\com\toolvault\reporting_service\dto\SummaryReportDto.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\reporting-service\src\main\java\com\toolvault\reporting_service\dto\WarehouseStockDto.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\reporting-service\src\main\java\com\toolvault\reporting_service\ReportingServiceApplication.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\reporting-service\src\main\java\com\toolvault\reporting_service\service\impl\ReportServiceImpl.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\reporting-service\src\main\java\com\toolvault\reporting_service\service\ReportService.java

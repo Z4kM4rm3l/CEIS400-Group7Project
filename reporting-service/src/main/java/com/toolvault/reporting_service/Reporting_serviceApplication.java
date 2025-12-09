@@ -1,1 +1,0 @@
-package com.toolvault.reporting_service; import org.springframework.boot.SpringApplication; import org.springframework.boot.autoconfigure.SpringBootApplication; @SpringBootApplication public class Reporting_serviceApplication { public static void main(String[] args) { SpringApplication.run(Reporting_serviceApplication.class, args); } }

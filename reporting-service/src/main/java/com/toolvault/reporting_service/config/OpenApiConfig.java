@@ -1,1 +1,19 @@
-package com.toolvault.reporting_service.config; import io.swagger.v3.oas.models.OpenAPI; import io.swagger.v3.oas.models.info.Info; import org.springframework.context.annotation.Bean; import org.springframework.context.annotation.Configuration; @Configuration public class OpenApiConfig { @Bean public OpenAPI customOpenAPI() { return new OpenAPI().info(new Info().title("reporting-service API").version("0.1.0").description("Skeleton for reporting-service")); } }
+package com.toolvault.reporting_service.config;
+
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.annotations.security.SecurityScheme;
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeType; // <-- correct package
+import org.springframework.context.annotation.Configuration;
+
+@OpenAPIDefinition(
+        info = @Info(title = "Reporting Service API", version = "v1",
+                description = "Reports for warehouse and depot with PDF/Excel export"))
+@SecurityScheme(
+        name = "bearerAuth",
+        type = SecuritySchemeType.HTTP,   // <-- enum constant
+        scheme = "bearer",
+        bearerFormat = "JWT"
+)
+@Configuration
+public class OpenApiConfig { }

@@ -1,6 +1,13 @@
-com\toolvault\procurement_service\service\MainService.class
+com\toolvault\procurement_service\dto\ProcurementStatusDto.class
+com\toolvault\procurement_service\dto\ProcurementUpdateDto.class
+com\toolvault\procurement_service\entity\PurchaseRequest.class
 com\toolvault\procurement_service\controller\MainController.class
-com\toolvault\procurement_service\Procurement_serviceApplication.class
-com\toolvault\procurement_service\repository\MainRepository.class
+com\toolvault\procurement_service\repository\PurchaseRequestRepository.class
+com\toolvault\procurement_service\service\ProcurementService.class
 com\toolvault\procurement_service\config\OpenApiConfig.class
 com\toolvault\procurement_service\domain\MainEntity.class
+com\toolvault\procurement_service\config\SecurityConfig.class
+com\toolvault\procurement_service\controller\ProcurementController.class
+com\toolvault\procurement_service\ProcurementServiceApplication.class
+com\toolvault\procurement_service\dto\ProcurementRequestDto.class
+com\toolvault\procurement_service\service\impl\ProcurementServiceImpl.class

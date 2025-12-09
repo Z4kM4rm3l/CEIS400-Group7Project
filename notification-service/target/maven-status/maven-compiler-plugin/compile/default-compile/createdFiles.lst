@@ -1,6 +1,9 @@
-com\toolvault\notification_service\controller\MainController.class
+com\toolvault\notification_service\config\SecurityConfig.class
+com\toolvault\notification_service\NotificationServiceApplication.class
+com\toolvault\notification_service\model\EmailNotificationRequest.class
+com\toolvault\notification_service\service\NotificationService.class
 com\toolvault\notification_service\config\OpenApiConfig.class
-com\toolvault\notification_service\domain\MainEntity.class
-com\toolvault\notification_service\service\MainService.class
-com\toolvault\notification_service\Notification_serviceApplication.class
-com\toolvault\notification_service\repository\MainRepository.class
+com\toolvault\notification_service\controller\NotificationController.class
+com\toolvault\notification_service\service\NotificationServiceImpl.class
+com\toolvault\notification_service\model\EventNotificationRequest.class
+com\toolvault\notification_service\model\SmsNotificationRequest.class

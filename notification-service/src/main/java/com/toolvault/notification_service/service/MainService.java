@@ -1,1 +1,0 @@
-package com.toolvault.notification_service.service; public class MainService { public void doSomething() { /* TODO */ } }

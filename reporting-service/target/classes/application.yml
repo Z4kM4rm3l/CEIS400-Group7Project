@@ -1,12 +1,43 @@
 spring:
-  application.name: reporting-service
+  application:
+    name: reporting-service
   datasource:
-    url: jdbc:h2:mem:reporting_service;MODE=MySQL
+    url: jdbc:h2:mem:reportdb;DB_CLOSE_DELAY=-1;MODE=PostgreSQL
     driverClassName: org.h2.Driver
     username: sa
-    password: ''
-  jpa.hibernate.ddl-auto: create-drop
-server.port: 8085
-management.endpoints.web.exposure.include: health,info,metrics
-springdoc.api-docs.path: /v3/api-docs
-springdoc.swagger-ui.path: /swagger-ui.html
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: none   # or 'update' if you want the table created
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+server:
+  port: 8086
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+security:
+  jwt:
+    hmac-secret: toolvault-demo-secret-please-change
+
+toolvault:
+  warehouse:
+    base-url: http://localhost:8082
+  depot:
+    base-url: http://localhost:8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
