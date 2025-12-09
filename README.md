@@ -1,21 +1,28 @@
 
-# ToolVault – Automated Equipment Checkout & Optimized Warehouse Inventory (Skeleton)
+**# ✅ ToolVault – Automated Equipment Checkout & Optimized Warehouse Inventory (Skeleton)
 
-**Status:** Skeleton architecture ready for incremental development  
-**Date:** November 28, 2025
-
----
-
-## Overview
-ToolVault is a modular, Spring Boot–based system that addresses tool loss and warehouse inefficiencies for GB Manufacturing.
-
-**Primary architecture:** N-Layered (Presentation → Service → Repository → Domain)  
-**Complementary architecture:** Event-Driven (Kafka)  
-**Tech:** Java 17, Spring Boot 3.3.x, Maven, H2 (dev) → MySQL (prod), Kafka, OpenAPI (springdoc), Actuator
+**Status:** Ready for testing
+**Date:** December 9, 2025
 
 ---
 
-## Repository Structure
+## 📌 Overview
+ToolVault is a modular, **Spring Boot–based system** designed to address tool loss and warehouse inefficiencies for **GB Manufacturing**.
+
+- **Primary Architecture:** N-Layered (Presentation → Service → Repository → Domain)
+- **Complementary Architecture:** Event-Driven (Kafka)
+- **Tech Stack:**
+    - Java 17
+    - Spring Boot 3.3.x
+    - Maven
+    - H2 (dev) → MySQL (prod)
+    - Kafka
+    - OpenAPI (springdoc)
+    - Actuator
+
+---
+
+## 📂 Repository Structure
 ```
 toolvault_full/
 ├── pom.xml                        # Parent POM
@@ -26,164 +33,129 @@ toolvault_full/
 ├── procurement-service/           # Automated ordering (skeleton)
 ├── reporting-service/             # Audit/usage (skeleton)
 ├── notification-service/          # Alerts consumers (skeleton)
-├── docker-compose.yml             # MySQL + Kafka for local infra (optional in skeleton)
+├── docker-compose.yml             # MySQL + Kafka for local infra (optional)
 └── .github/workflows/ci.yml       # GitHub Actions CI
-```
-
-Each service follows the N-layered package structure:
-```
-com.toolvault.<service_name>/
-  ├── controller/       # REST endpoints (placeholder)
-  ├── service/          # Business logic (TODO)
-  ├── repository/       # Spring Data JPA interfaces
-  ├── domain/           # JPA entities (basic fields)
-  └── config/           # OpenAPI config
 ```
 
 ---
 
-## Quick Start
-### Prerequisites
+## 🚀 Quick Start
+
+### **Prerequisites**
 - Java 17
 - Maven 3.9+
 - IntelliJ IDEA (recommended)
 
-### Build
-```bash
+### **Build**
+```shell
 mvn clean install
 ```
 
-### Run a Service (example: Identity)
-```bash
+### **Run a Service (Example: Identity)**
+```shell
 mvn -pl identity-service spring-boot:run
 ```
 
-### Swagger & Actuator
-- Swagger UI: `http://localhost:<port>/swagger-ui.html`
-- API Docs: `http://localhost:<port>/v3/api-docs`
-- Health: `http://localhost:<port>/actuator/health`
-- Info: `http://localhost:<port>/actuator/info`
+---
 
-Default ports:
+## ✅ Testing Instructions (Module-Level)
+
+### **1. Identity Service (RBAC, MFA skeleton)**
+**Goal:** Verify endpoints and security config allow Swagger/Actuator access.  
+Run:
+```shell
+mvn -pl identity-service test
 ```
-identity-service:       8081
-depot-ops-service:      8082
-warehouse-ops-service:  8083
-procurement-service:    8084
-reporting-service:      8085
-notification-service:   8086
+**Tests to include:**
+- `IdentityControllerSmokeTest`: Assert `/swagger-ui.html` and `/actuator/health` return **200 OK**.
+- `SecurityConfigTest`: Ensure `permitAll()` for Swagger paths.
+
+**Manual Check:**  
+Visit [http://localhost:8081/swagger-ui.html](http://localhost:8081/swagger-ui.html) and confirm endpoints load.
+
+---
+
+### **2. Depot Ops Service (Checkout/Check-in skeleton)**
+**Goal:** Validate controller stubs and domain mapping.  
+Run:
+```shell
+mvn -pl depot-ops-service test
+```
+**Tests to include:**
+- `DepotControllerSmokeTest`: Assert `/checkout` and `/checkin` return **501 Not Implemented**.
+- `EntityMappingTest`: Validate JPA entity fields exist (e.g., Equipment, Badge).
+
+**Manual Check:**
+```shell
+curl -X POST http://localhost:8082/checkout
 ```
 
 ---
 
-## Development Profiles
-- **Dev:** H2 in-memory (`application.yml` in each service) for instant startup.
-- **Prod (later):** Switch to MySQL (see `docker-compose.yml`) and configure datasource.
+### **3. Warehouse Ops Service (Inventory skeleton)**
+**Goal:** Confirm inventory endpoints and entity persistence.  
+Run:
+```shell
+mvn -pl warehouse-ops-service test
+```
+**Tests to include:**
+- `WarehouseControllerSmokeTest`: `/inventory` and `/transfer` return **501**.
+- `RepositoryIntegrationTest`: Use H2 to persist `InventoryItem` and assert retrieval.
 
 ---
 
-## Event-Driven (Skeleton)
-Stubs for producers/consumers exist; integrate Kafka later with topics such as:
-- `equipment.checkout`
-- `equipment.overdue`
-- `inventory.lowstock`
-- `procurement.order`
+### **4. Procurement Service**
+**Goal:** Validate order endpoint stub.  
+Run:
+```shell
+mvn -pl procurement-service test
+```
+**Tests to include:**
+- `ProcurementControllerSmokeTest`: `/order` returns **501**.
 
 ---
 
-## Security (Skeleton)
-Identity service includes a basic Spring Security config that permits Swagger/Actuator. RBAC, MFA (TOTP), 15-min session timeout, and JWT will be added during implementation.
+### **5. Reporting Service**
+**Goal:** Validate audit and usage endpoints.  
+Run:
+```shell
+mvn -pl reporting-service test
+```
+**Tests to include:**
+- `ReportingControllerSmokeTest`: `/audit` and `/usage` return **501**.
 
 ---
 
-## CI/CD
-GitHub Actions workflow (`.github/workflows/ci.yml`) builds the project on pushes and PRs:
+### **6. Notification Service**
+**Goal:** Validate `/ping` endpoint and Kafka consumer stubs.  
+Run:
+```shell
+mvn -pl notification-service test
+```
+**Tests to include:**
+- `NotificationControllerSmokeTest`: `/ping` returns **200 OK**.
+
+---
+
+## ✅ Common Testing Setup
+- JUnit 5 for unit tests
+- Spring Boot Test for integration tests
+- **Future:** Testcontainers for MySQL + Kafka event-driven tests
+
+---
+
+## 🔄 CI/CD Testing Integration
+Update `.github/workflows/ci.yml` to run module-specific tests:
 ```yaml
-name: Maven CI
-on: [push, pull_request]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Set up JDK
-        uses: actions/setup-java@v4
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-      - name: Build with Maven
-        run: mvn -U -nsu clean install
-      - name: Run tests
-        run: mvn test
- 
+- name: Run module tests
+  run: mvn -pl identity-service,depot-ops-service,warehouse-ops-service,procurement-service,reporting-service,notification-service test
 ```
 
 ---
 
-## Requirements Trace (at skeleton stage)
-- **Subsystem A (Depot Ops):** Controllers stubs for `checkout`, `checkin` (TODO return). Domain entities created.
-- **Subsystem B (Warehouse Ops):** Controllers stubs for `inventory`, `transfer`. Domain entities created.
-- **Procurement:** `order` controller stub.
-- **Reporting:** `audit`, `usage` stubs.
-- **Notification:** `/ping` endpoint; consumer stubs planned.
-- **Security:** Identity stubs (controllers, config).
-- **Monitoring:** Actuator enabled in all services.
-- **Docs:** springdoc-openapi enabled in all services.
-
----
-
-## Next Implementation Steps
-1. Implement Identity (RBAC roles, JWT, MFA).
-2. Wire Kafka producers/consumers, define topics and event payloads.
-3. Implement Depot Ops flows (badge-based checkout, condition logging, overdue alerts).
-4. Implement Warehouse Ops (real-time visibility, transfers, low-stock alerts, reorder triggers).
-5. Switch to MySQL for persistence; add migrations (Flyway/Liquibase).
-6. Add unit & integration tests (JUnit, Testcontainers for MySQL/Kafka).
-7. Harden security (TLS/HTTPS, VPN, AES-256 at rest via MySQL TDE or field-level).
-
----
-
-## How to Submit via GitHub
-1. Create a repo on GitHub (private or public).
-2. From project root:
-```bash
-git init
-git add .
-git commit -m "ToolVault skeleton"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<repo-name>.git
-git push -u origin main
-```
-## Using GitHub for Versions (Architecture vs Completed Code)
-Use **branches, tags, and releases**:
-- **Branching:**
-  - `main` → holds stable code.
-  - `skeleton` → initial architecture-only version.
-  - Feature branches → e.g., `feature/identity-mfa`, `feature/kafka-integrations`.
-- **Tags:**
-  - Tag the skeleton milestone: `v0.1.0-skeleton`.
-- **Releases:**
-  - Create a GitHub Release for the skeleton; later create `v1.0.0` for completed code.
-
-**Workflow example:**
-```bash
-# Create skeleton branch and push
-git checkout -b skeleton
-git push -u origin skeleton
-
-# Tag the skeleton state
-git tag v0.1.0-skeleton
-git push origin v0.1.0-skeleton
-
-# Merge completed features into main later and tag release
-git checkout main
-# ... merge PRs ...
-git tag v1.0.0
-git push origin v1.0.0
-```
-This gives a clear view of the baseline architecture and the subsequent completed implementations.
-
----
-
-## Contact
-Questions or issues? Open an Issue on the repository.
+## 📈 Next Steps
+- Make one line run command to boot all modules at once
+- Polish end-point module integration
+- Add Kafka event tests using Testcontainers
+- Add security tests for JWT and MFA flows  
+  **
