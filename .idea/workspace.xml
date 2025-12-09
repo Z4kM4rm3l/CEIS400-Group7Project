@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="73a5bfec-3a35-4e21-b60c-615c86a4a451" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/DepotOpsApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/api/DepotController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/api/dto/CheckInRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/api/dto/CheckOutRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/api/dto/TransferRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/config/DataSeeder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/config/RestClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/domain/Asset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/domain/TransferRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/integration/WarehouseClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/repository/AssetRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/repository/TransferRequestRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/test/java/com/toolvault/depot_ops_service/api/DepotControllerSmokeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity_service/src/main/java/com/toolvault/identity_service/IdentityServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity_service/src/main/java/com/toolvault/identity_service/auth/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity_service/src/main/java/com/toolvault/identity_service/auth/AuthServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity_service/src/main/java/com/toolvault/identity_service/auth/dto/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity_service/src/main/java/com/toolvault/identity_service/auth/dto/RefreshRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity_service/src/main/java/com/toolvault/identity_service/auth/dto/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity_service/src/main/java/com/toolvault/identity_service/auth/dto/TokenPairResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity_service/src/main/java/com/toolvault/identity_service/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity_service/src/test/java/com/toolvault/identity_service/TestBootConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity_service/src/test/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/warehouse-ops-service/src/main/java/com/toolvault/warehouse_ops_service/WarehouseOpsApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/warehouse-ops-service/src/main/java/com/toolvault/warehouse_ops_service/api/WarehouseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/warehouse-ops-service/src/main/java/com/toolvault/warehouse_ops_service/api/dto/AllocateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/warehouse-ops-service/src/main/java/com/toolvault/warehouse_ops_service/api/dto/RestockRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/warehouse-ops-service/src/main/java/com/toolvault/warehouse_ops_service/config/DataSeeder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/warehouse-ops-service/src/main/java/com/toolvault/warehouse_ops_service/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/warehouse-ops-service/src/main/java/com/toolvault/warehouse_ops_service/service/WarehouseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/Depot_ops_serviceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/config/OpenApiConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/config/OpenApiConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/controller/MainController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/domain/MainEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/repository/MainRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/service/MainService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/README-IDENTITY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/java/com/toolvault/identity/admin/AdminController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/java/com/toolvault/identity/bootstrap/DataSeeder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/java/com/toolvault/identity_service/Identity_serviceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/java/com/toolvault/identity_service/config/OpenApiConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/java/com/toolvault/identity_service/controller/MainController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/java/com/toolvault/identity_service/domain/MainEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/java/com/toolvault/identity_service/repository/MainRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/java/com/toolvault/identity_service/service/MainService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/test/java/com/toolvault/identity/AdminAccessTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/target/classes/META-INF/build-info.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/target/classes/com/toolvault/identity_service/Identity_serviceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/target/classes/com/toolvault/identity_service/config/OpenApiConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/target/classes/com/toolvault/identity_service/controller/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/target/classes/com/toolvault/identity_service/domain/MainEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/target/classes/com/toolvault/identity_service/repository/MainRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/target/classes/com/toolvault/identity_service/service/MainService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/target/identity-service-0.1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qodana.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/qodana.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/src/main/java/com/toolvault/warehouse_ops_service/Warehouse_ops_serviceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/src/main/java/com/toolvault/warehouse_ops_service/config/OpenApiConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/src/main/java/com/toolvault/warehouse_ops_service/config/OpenApiConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/src/main/java/com/toolvault/warehouse_ops_service/domain/MainEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/src/main/java/com/toolvault/warehouse_ops_service/domain/StockItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/src/main/java/com/toolvault/warehouse_ops_service/repository/MainRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/src/main/java/com/toolvault/warehouse_ops_service/repository/StockItemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/src/main/java/com/toolvault/warehouse_ops_service/service/MainService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/src/main/resources/application.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Z4kM4rm3l&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Z4kM4rm3l/CEIS400-Group7Project.git&quot;,
+    &quot;accountId&quot;: &quot;24b7a0db-ec54-4fca-871b-6404172683ec&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="36Az6rnQchbEcUM6A4qLeE963iK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "#1 on feature/identity-auth",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/zmarm/OneDrive/Desktop/Full Skeleton Code/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/repository",
+    "settings.editor.selected.configurable": "MavenSettings"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\depot-ops-service\src\main\java\com\toolvault\depot_ops_service\repository" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Full Skeleton Code" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="73a5bfec-3a35-4e21-b60c-615c86a4a451" name="Changes" comment="" />
+      <created>1764463993353</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764463993353</updated>
+    </task>
+    <servers />
+  </component>
+</project>

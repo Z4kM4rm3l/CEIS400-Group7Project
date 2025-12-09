@@ -1,1 +1,0 @@
-package com.toolvault.warehouse_ops_service.service; public class MainService { public void doSomething() { /* TODO */ } }
