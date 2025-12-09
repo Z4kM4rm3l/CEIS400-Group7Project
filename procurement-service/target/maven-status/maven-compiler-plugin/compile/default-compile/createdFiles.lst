@@ -1,0 +1,6 @@
+com\toolvault\procurement_service\service\MainService.class
+com\toolvault\procurement_service\controller\MainController.class
+com\toolvault\procurement_service\Procurement_serviceApplication.class
+com\toolvault\procurement_service\repository\MainRepository.class
+com\toolvault\procurement_service\config\OpenApiConfig.class
+com\toolvault\procurement_service\domain\MainEntity.class

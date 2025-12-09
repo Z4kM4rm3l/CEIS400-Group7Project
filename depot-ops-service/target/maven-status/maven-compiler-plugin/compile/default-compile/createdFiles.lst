@@ -1,0 +1,17 @@
+com\toolvault\depot_ops_service\config\RestClientConfig.class
+com\toolvault\depot_ops_service\service\DepotService.class
+com\toolvault\depot_ops_service\api\DepotController.class
+com\toolvault\depot_ops_service\domain\Asset.class
+com\toolvault\depot_ops_service\config\SecurityConfig.class
+com\toolvault\depot_ops_service\domain\TransferRequest$State.class
+com\toolvault\depot_ops_service\api\dto\CheckOutRequest.class
+com\toolvault\depot_ops_service\repository\TransferRequestRepository.class
+com\toolvault\depot_ops_service\config\DataSeeder.class
+com\toolvault\depot_ops_service\integration\WarehouseClient.class
+com\toolvault\depot_ops_service\repository\AssetRepository.class
+com\toolvault\depot_ops_service\domain\Asset$Status.class
+com\toolvault\depot_ops_service\api\dto\TransferRequestDto.class
+com\toolvault\depot_ops_service\config\OpenApiConfig.class
+com\toolvault\depot_ops_service\domain\TransferRequest.class
+com\toolvault\depot_ops_service\api\dto\CheckInRequest.class
+com\toolvault\depot_ops_service\DepotOpsApplication.class

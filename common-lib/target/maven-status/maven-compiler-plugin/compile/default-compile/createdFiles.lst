@@ -1,0 +1,4 @@
+com\toolvault\common\events\LowStockEvent.class
+com\toolvault\common\dto\EquipmentDTO.class
+com\toolvault\common\util\CryptoService.class
+com\toolvault\common\security\Role.class

@@ -1,0 +1,11 @@
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\warehouse-ops-service\src\main\java\com\toolvault\warehouse_ops_service\api\dto\AllocateRequest.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\warehouse-ops-service\src\main\java\com\toolvault\warehouse_ops_service\api\dto\RestockRequest.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\warehouse-ops-service\src\main\java\com\toolvault\warehouse_ops_service\api\WarehouseController.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\warehouse-ops-service\src\main\java\com\toolvault\warehouse_ops_service\config\DataSeeder.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\warehouse-ops-service\src\main\java\com\toolvault\warehouse_ops_service\config\OpenApiConfig.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\warehouse-ops-service\src\main\java\com\toolvault\warehouse_ops_service\config\SecurityConfig.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\warehouse-ops-service\src\main\java\com\toolvault\warehouse_ops_service\controller\MainController.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\warehouse-ops-service\src\main\java\com\toolvault\warehouse_ops_service\domain\StockItem.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\warehouse-ops-service\src\main\java\com\toolvault\warehouse_ops_service\repository\StockItemRepository.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\warehouse-ops-service\src\main\java\com\toolvault\warehouse_ops_service\service\WarehouseService.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\warehouse-ops-service\src\main\java\com\toolvault\warehouse_ops_service\WarehouseOpsApplication.java

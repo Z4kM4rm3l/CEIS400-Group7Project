@@ -1,1 +1,0 @@
-package com.toolvault.warehouse_ops_service.domain; import jakarta.persistence.*; @Entity public class MainEntity { @Id @GeneratedValue private Long id; private String name; }

@@ -1,0 +1,15 @@
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\depot-ops-service\src\main\java\com\toolvault\depot_ops_service\api\DepotController.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\depot-ops-service\src\main\java\com\toolvault\depot_ops_service\api\dto\CheckInRequest.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\depot-ops-service\src\main\java\com\toolvault\depot_ops_service\api\dto\CheckOutRequest.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\depot-ops-service\src\main\java\com\toolvault\depot_ops_service\api\dto\TransferRequestDto.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\depot-ops-service\src\main\java\com\toolvault\depot_ops_service\config\DataSeeder.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\depot-ops-service\src\main\java\com\toolvault\depot_ops_service\config\OpenApiConfig.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\depot-ops-service\src\main\java\com\toolvault\depot_ops_service\config\RestClientConfig.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\depot-ops-service\src\main\java\com\toolvault\depot_ops_service\config\SecurityConfig.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\depot-ops-service\src\main\java\com\toolvault\depot_ops_service\DepotOpsApplication.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\depot-ops-service\src\main\java\com\toolvault\depot_ops_service\domain\Asset.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\depot-ops-service\src\main\java\com\toolvault\depot_ops_service\domain\TransferRequest.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\depot-ops-service\src\main\java\com\toolvault\depot_ops_service\integration\WarehouseClient.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\depot-ops-service\src\main\java\com\toolvault\depot_ops_service\repository\AssetRepository.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\depot-ops-service\src\main\java\com\toolvault\depot_ops_service\repository\TransferRequestRepository.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\depot-ops-service\src\main\java\com\toolvault\depot_ops_service\service\DepotService.java

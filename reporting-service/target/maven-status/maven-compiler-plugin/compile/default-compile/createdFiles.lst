@@ -1,0 +1,6 @@
+com\toolvault\reporting_service\repository\MainRepository.class
+com\toolvault\reporting_service\Reporting_serviceApplication.class
+com\toolvault\reporting_service\controller\MainController.class
+com\toolvault\reporting_service\domain\MainEntity.class
+com\toolvault\reporting_service\service\MainService.class
+com\toolvault\reporting_service\config\OpenApiConfig.class
