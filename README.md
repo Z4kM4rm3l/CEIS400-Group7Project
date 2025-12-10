@@ -27,12 +27,12 @@ ToolVault is a modular, **Spring Boot–based system** designed to address tool 
 toolvault_full/
 ├── pom.xml                        # Parent POM
 ├── common-lib/                    # Shared DTOs, Events, Enums, Crypto stub
-├── identity-service/              # RBAC, MFA (skeleton)
-├── depot-ops-service/             # Equipment check-in/out (skeleton)
-├── warehouse-ops-service/         # Inventory, transfers, low-stock (skeleton)
-├── procurement-service/           # Automated ordering (skeleton)
-├── reporting-service/             # Audit/usage (skeleton)
-├── notification-service/          # Alerts consumers (skeleton)
+├── identity-service/              # RBAC, MFA 
+├── depot-ops-service/             # Equipment check-in/out 
+├── warehouse-ops-service/         # Inventory, transfers, low-stock 
+├── procurement-service/           # Automated ordering 
+├── reporting-service/             # Audit/usage 
+├── notification-service/          # Alerts consumers 
 ├── docker-compose.yml             # MySQL + Kafka for local infra (optional)
 └── .github/workflows/ci.yml       # GitHub Actions CI
 ```
@@ -60,7 +60,7 @@ mvn -pl identity-service spring-boot:run
 
 ## ✅ Testing Instructions (Module-Level)
 
-### **1. Identity Service (RBAC, MFA skeleton)**
+### **1. Identity Service (RBAC, MFA )**
 **Goal:** Verify endpoints and security config allow Swagger/Actuator access.  
 Run:
 ```shell
@@ -75,7 +75,7 @@ Visit [http://localhost:8081/swagger-ui.html](http://localhost:8081/swagger-ui.h
 
 ---
 
-### **2. Depot Ops Service (Checkout/Check-in skeleton)**
+### **2. Depot Ops Service (Checkout/Check-in tools)**
 **Goal:** Validate controller stubs and domain mapping.  
 Run:
 ```shell
@@ -92,7 +92,7 @@ curl -X POST http://localhost:8082/checkout
 
 ---
 
-### **3. Warehouse Ops Service (Inventory skeleton)**
+### **3. Warehouse Ops Service (Inventory)**
 **Goal:** Confirm inventory endpoints and entity persistence.  
 Run:
 ```shell
