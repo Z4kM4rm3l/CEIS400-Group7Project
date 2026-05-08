@@ -5,93 +5,87 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73a5bfec-3a35-4e21-b60c-615c86a4a451" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/toolvault/notification_service/NotificationServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/toolvault/notification_service/model/EmailNotificationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/toolvault/notification_service/model/EventNotificationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/toolvault/notification_service/model/SmsNotificationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/toolvault/notification_service/service/NotificationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procurement-service/src/main/java/com/toolvault/procurement_service/ProcurementServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procurement-service/src/main/java/com/toolvault/procurement_service/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procurement-service/src/main/java/com/toolvault/procurement_service/controller/ProcurementController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procurement-service/src/main/java/com/toolvault/procurement_service/dto/ProcurementRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procurement-service/src/main/java/com/toolvault/procurement_service/dto/ProcurementStatusDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procurement-service/src/main/java/com/toolvault/procurement_service/dto/ProcurementUpdateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procurement-service/src/main/java/com/toolvault/procurement_service/entity/PurchaseRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procurement-service/src/main/java/com/toolvault/procurement_service/service/ProcurementServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procurement-service/src/test/java/com/toolvault/controller/ProcurementControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procurement-service/src/test/java/com/toolvault/service/ProcurementServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/scripts/make-demo-jwt.ps1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/toolvault/reporting_service/client/DepotClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/toolvault/reporting_service/client/WarehouseClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/toolvault/reporting_service/config/JwtAuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/toolvault/reporting_service/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/toolvault/reporting_service/controller/ReportController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/toolvault/reporting_service/dto/DepotActivityDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/toolvault/reporting_service/dto/SummaryReportDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/toolvault/reporting_service/dto/WarehouseStockDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/toolvault/reporting_service/service/ReportService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/toolvault/reporting_service/service/impl/ReportServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/src/test/java/com/toolvault/reporting_service/controller/ReportControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/controller/ForecastingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/controller/JobController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/domain/CheckoutHistory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/domain/Job.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/domain/JobAlert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/exception/AssetNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/exception/InvalidAssetStateException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/exception/InvalidTagException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/repository/CheckoutHistoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/repository/JobAlertRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/repository/JobRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/service/JobService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity_service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identity_service/src/main/java/com/toolvault/identity_service/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/init.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toolvault-ui/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/warehouse-ops-service/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/DepotOpsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/DepotOpsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/api/DepotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/api/DepotController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/config/DataSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/config/DataSeeder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/domain/Asset.java" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/domain/Asset.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/domain/TransferRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/domain/TransferRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/service/DepotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/src/main/java/com/toolvault/depot_ops_service/service/DepotService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/target/classes/com/toolvault/depot_ops_service/DepotOpsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/target/classes/com/toolvault/depot_ops_service/DepotOpsApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/target/classes/com/toolvault/depot_ops_service/api/DepotController.class" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/target/classes/com/toolvault/depot_ops_service/api/DepotController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/target/classes/com/toolvault/depot_ops_service/config/DataSeeder.class" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/target/classes/com/toolvault/depot_ops_service/config/DataSeeder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/target/classes/com/toolvault/depot_ops_service/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/target/classes/com/toolvault/depot_ops_service/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/target/classes/com/toolvault/depot_ops_service/domain/Asset$Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/target/classes/com/toolvault/depot_ops_service/domain/Asset$Status.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/target/classes/com/toolvault/depot_ops_service/domain/Asset.class" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/target/classes/com/toolvault/depot_ops_service/domain/Asset.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/target/classes/com/toolvault/depot_ops_service/domain/TransferRequest$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/target/classes/com/toolvault/depot_ops_service/domain/TransferRequest$State.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/target/classes/com/toolvault/depot_ops_service/domain/TransferRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/target/classes/com/toolvault/depot_ops_service/domain/TransferRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/target/classes/com/toolvault/depot_ops_service/service/DepotService.class" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/target/classes/com/toolvault/depot_ops_service/service/DepotService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/depot-ops-service/target/depot-ops-service-0.1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/target/depot-ops-service-0.1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/depot-ops-service/target/depot-ops-service-0.1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/target/depot-ops-service-0.1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/depot-ops-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/target/surefire-reports/TEST-com.toolvault.depot_ops_service.api.DepotControllerSmokeTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/depot-ops-service/target/surefire-reports/com.toolvault.depot_ops_service.api.DepotControllerSmokeTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.mysql.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identity_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity_service/src/main/java/com/toolvault/identity_service/auth/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/identity_service/src/main/java/com/toolvault/identity_service/auth/AuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity_service/src/main/java/com/toolvault/identity_service/bootstrap/DataSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/identity_service/src/main/java/com/toolvault/identity_service/bootstrap/DataSeeder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity_service/src/main/java/com/toolvault/identity_service/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/identity_service/src/main/java/com/toolvault/identity_service/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity_service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/identity_service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/identity_service/target/classes/META-INF/build-info.properties" beforeDir="false" afterPath="$PROJECT_DIR$/identity_service/target/classes/META-INF/build-info.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity_service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/identity_service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity_service/target/classes/com/toolvault/identity_service/auth/AuthServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/identity_service/target/classes/com/toolvault/identity_service/auth/AuthServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity_service/target/classes/com/toolvault/identity_service/bootstrap/DataSeeder.class" beforeDir="false" afterPath="$PROJECT_DIR$/identity_service/target/classes/com/toolvault/identity_service/bootstrap/DataSeeder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity_service/target/classes/com/toolvault/identity_service/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/identity_service/target/classes/com/toolvault/identity_service/config/SecurityConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/identity_service/target/identity_service-0.1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/identity_service/target/identity_service-0.1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/identity_service/target/identity_service-0.1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/identity_service/target/identity_service-0.1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/toolvault/notification_service/Notification_serviceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/toolvault/notification_service/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/toolvault/notification_service/controller/NotificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/toolvault/notification_service/domain/MainEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/toolvault/notification_service/repository/MainRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/toolvault/notification_service/service/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/toolvault/notification_service/service/NotificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/target/classes/META-INF/build-info.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/target/classes/com/toolvault/notification_service/Notification_serviceApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/target/classes/com/toolvault/notification_service/controller/MainController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/target/classes/com/toolvault/notification_service/domain/MainEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/target/classes/com/toolvault/notification_service/repository/MainRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/target/classes/com/toolvault/notification_service/service/MainService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity_service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/identity_service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity_service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/identity_service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity_service/target/surefire-reports/TEST-com.toolvault.identity_service.AdminAccessTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity_service/target/surefire-reports/TEST-com.toolvault.identity_service.AuthSmokeTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity_service/target/surefire-reports/com.toolvault.identity_service.AdminAccessTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity_service/target/surefire-reports/com.toolvault.identity_service.AuthSmokeTests.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/notification-service/target/notification-service-0.1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/target/notification-service-0.1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procurement-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/procurement-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procurement-service/src/main/java/com/toolvault/procurement_service/Procurement_serviceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/procurement-service/src/main/java/com/toolvault/procurement_service/config/OpenApiConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/procurement-service/src/main/java/com/toolvault/procurement_service/config/OpenApiConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procurement-service/src/main/java/com/toolvault/procurement_service/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/procurement-service/src/main/java/com/toolvault/procurement_service/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procurement-service/src/main/java/com/toolvault/procurement_service/repository/MainRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/procurement-service/src/main/java/com/toolvault/procurement_service/repository/PurchaseRequestRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procurement-service/src/main/java/com/toolvault/procurement_service/service/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/procurement-service/src/main/java/com/toolvault/procurement_service/service/ProcurementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procurement-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/procurement-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procurement-service/target/classes/META-INF/build-info.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/procurement-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/procurement-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procurement-service/target/classes/com/toolvault/procurement_service/Procurement_serviceApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/procurement-service/target/classes/com/toolvault/procurement_service/config/OpenApiConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/procurement-service/target/classes/com/toolvault/procurement_service/config/OpenApiConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procurement-service/target/classes/com/toolvault/procurement_service/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/procurement-service/target/classes/com/toolvault/procurement_service/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procurement-service/target/classes/com/toolvault/procurement_service/repository/MainRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/procurement-service/target/classes/com/toolvault/procurement_service/service/MainService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/procurement-service/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/procurement-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/procurement-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procurement-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/procurement-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procurement-service/target/procurement-service-0.1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reporting-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/src/main/java/com/toolvault/reporting_service/Reporting_serviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/toolvault/reporting_service/ReportingServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/src/main/java/com/toolvault/reporting_service/config/OpenApiConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/toolvault/reporting_service/config/OpenApiConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/src/main/java/com/toolvault/reporting_service/domain/MainEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/src/main/java/com/toolvault/reporting_service/repository/MainRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/src/main/java/com/toolvault/reporting_service/service/MainService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/reporting-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/target/classes/META-INF/build-info.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/reporting-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/target/classes/com/toolvault/reporting_service/Reporting_serviceApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/target/classes/com/toolvault/reporting_service/config/OpenApiConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/reporting-service/target/classes/com/toolvault/reporting_service/config/OpenApiConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/target/classes/com/toolvault/reporting_service/domain/MainEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/target/classes/com/toolvault/reporting_service/repository/MainRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/target/classes/com/toolvault/reporting_service/service/MainService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/reporting-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/reporting-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/target/reporting-service-0.1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/target/classes/META-INF/build-info.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/target/notification-service-0.1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/target/notification-service-0.1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/src/main/java/com/toolvault/warehouse_ops_service/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/src/main/java/com/toolvault/warehouse_ops_service/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/target/classes/com/toolvault/warehouse_ops_service/WarehouseOpsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/target/classes/com/toolvault/warehouse_ops_service/WarehouseOpsApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/target/classes/com/toolvault/warehouse_ops_service/api/WarehouseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/target/classes/com/toolvault/warehouse_ops_service/api/WarehouseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/target/classes/com/toolvault/warehouse_ops_service/api/dto/AllocateRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/target/classes/com/toolvault/warehouse_ops_service/api/dto/AllocateRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/target/classes/com/toolvault/warehouse_ops_service/api/dto/RestockRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/target/classes/com/toolvault/warehouse_ops_service/api/dto/RestockRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/target/classes/com/toolvault/warehouse_ops_service/config/DataSeeder.class" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/target/classes/com/toolvault/warehouse_ops_service/config/DataSeeder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/target/classes/com/toolvault/warehouse_ops_service/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/target/classes/com/toolvault/warehouse_ops_service/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/target/classes/com/toolvault/warehouse_ops_service/domain/StockItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/target/classes/com/toolvault/warehouse_ops_service/domain/StockItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/target/classes/com/toolvault/warehouse_ops_service/repository/StockItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/target/classes/com/toolvault/warehouse_ops_service/repository/StockItemRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-ops-service/target/classes/com/toolvault/warehouse_ops_service/service/WarehouseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/target/classes/com/toolvault/warehouse_ops_service/service/WarehouseService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/warehouse-ops-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/warehouse-ops-service/target/warehouse-ops-service-0.1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/target/warehouse-ops-service-0.1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/warehouse-ops-service/target/warehouse-ops-service-0.1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-ops-service/target/warehouse-ops-service-0.1.0-SNAPSHOT.jar.original" afterDir="false" />
@@ -132,19 +126,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "#1 on feature/identity-auth",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/zmarm/OneDrive/Desktop/Full Skeleton Code/procurement-service/src/test/java/com/toolvault",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/zmarm/OneDrive/Desktop/Full Skeleton Code/procurement-service/src/test/java/com/toolvault&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\procurement-service\src\test\java\com\toolvault" />

@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.toolvault.depot_ops_service.api.DepotControllerSmokeTest
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.977 s -- in com.toolvault.depot_ops_service.api.DepotControllerSmokeTest

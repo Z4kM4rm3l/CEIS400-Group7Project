@@ -1,11 +1,11 @@
-com\toolvault\warehouse_ops_service\config\SecurityConfig.class
-com\toolvault\warehouse_ops_service\api\dto\RestockRequest.class
 com\toolvault\warehouse_ops_service\config\OpenApiConfig.class
 com\toolvault\warehouse_ops_service\controller\MainController.class
-com\toolvault\warehouse_ops_service\repository\StockItemRepository.class
 com\toolvault\warehouse_ops_service\api\dto\AllocateRequest.class
-com\toolvault\warehouse_ops_service\config\DataSeeder.class
 com\toolvault\warehouse_ops_service\api\WarehouseController.class
 com\toolvault\warehouse_ops_service\WarehouseOpsApplication.class
 com\toolvault\warehouse_ops_service\domain\StockItem.class
 com\toolvault\warehouse_ops_service\service\WarehouseService.class
+com\toolvault\warehouse_ops_service\config\SecurityConfig.class
+com\toolvault\warehouse_ops_service\api\dto\RestockRequest.class
+com\toolvault\warehouse_ops_service\repository\StockItemRepository.class
+com\toolvault\warehouse_ops_service\config\DataSeeder.class

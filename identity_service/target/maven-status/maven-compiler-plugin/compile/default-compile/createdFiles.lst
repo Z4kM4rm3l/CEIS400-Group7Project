@@ -7,6 +7,7 @@ com\toolvault\identity_service\auth\dto\RefreshRequest.class
 com\toolvault\identity_service\auth\dto\RegisterRequest.class
 com\toolvault\identity_service\controller\MainController.class
 com\toolvault\identity_service\config\SecurityConfig.class
+com\toolvault\identity_service\exception\GlobalExceptionHandler.class
 com\toolvault\identity_service\config\OpenApiConfig.class
 com\toolvault\identity_service\domain\MainEntity.class
 com\toolvault\identity_service\auth\dto\LoginRequest.class
