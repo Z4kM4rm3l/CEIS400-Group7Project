@@ -3,6 +3,7 @@ C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\identity_service\src\main\jav
 C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\identity_service\src\main\java\com\toolvault\identity_service\auth\AuthServiceImpl.java
 C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\identity_service\src\main\java\com\toolvault\identity_service\controller\MainController.java
 C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\identity_service\src\main\java\com\toolvault\identity_service\jwt\JwtProvider.java
+C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\identity_service\src\main\java\com\toolvault\identity_service\exception\GlobalExceptionHandler.java
 C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\identity_service\src\main\java\com\toolvault\identity_service\service\MainService.java
 C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\identity_service\src\main\java\com\toolvault\identity_service\user\UserRepository.java
 C:\Users\zmarm\OneDrive\Desktop\Full Skeleton Code\identity_service\src\main\java\com\toolvault\identity_service\admin\AdminController.java

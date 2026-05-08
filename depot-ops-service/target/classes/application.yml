@@ -1,27 +1,25 @@
 spring:
   application:
-    name: depot-ops
+    name: depot-ops-service
   datasource:
-    url: jdbc:h2:mem:depotdb;DB_CLOSE_DELAY=-1;MODE=PostgreSQL
-    driverClassName: org.h2.Driver
-    username: sa
-    password:
+    url: ${SPRING_DATASOURCE_URL:jdbc:h2:mem:depotdb;DB_CLOSE_DELAY=-1;MODE=MySQL}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${SPRING_DATASOURCE_USERNAME:sa}
+    password: ${SPRING_DATASOURCE_PASSWORD:sa}
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
+    open-in-view: false
     properties:
       hibernate:
         format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
 
 server:
-  port: 8081
+  port: 8082
 
-springdoc:
-  api-docs:
-    path: /v3/api-docs
-  swagger-ui:
-    path: /swagger-ui.html
-
-warehouse:
-  base-url: http://localhost:8082
-
+jwt:
+  secret: ${JWT_SECRET:b20a0c46f1e64b29b20a0c46f1e64b29b20a0c46f1e64b29b20a0c46f1e64b29}

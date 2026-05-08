@@ -1,14 +1,15 @@
 spring:
   application:
-    name: warehouse-ops
+    name: warehouse-ops-service
   datasource:
-    url: jdbc:h2:mem:whdb;DB_CLOSE_DELAY=-1;MODE=PostgreSQL
-    driverClassName: org.h2.Driver
-    username: sa
-    password:
+    url: ${SPRING_DATASOURCE_URL:jdbc:h2:mem:warehousedb;DB_CLOSE_DELAY=-1;MODE=MySQL}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${SPRING_DATASOURCE_USERNAME:sa}
+    password: ${SPRING_DATASOURCE_PASSWORD:sa}
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
+    open-in-view: false
     properties:
       hibernate:
         format_sql: true
@@ -18,7 +19,7 @@ spring:
       path: /h2-console
 
 server:
-  port: 8082
+  port: 8083
 
 springdoc:
   api-docs:
