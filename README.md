@@ -1,161 +1,187 @@
+# ToolVault
 
-**# ✅ ToolVault – Automated Equipment Checkout & Optimized Warehouse Inventory (Skeleton)
-
-**Status:** Skeleton architecture ready for incremental development  
-**Date:** November 28, 2025
+> AI-powered inventory management system built for construction operations.
 
 ---
 
-## 📌 Overview
-ToolVault is a modular, **Spring Boot–based system** designed to address tool loss and warehouse inefficiencies for **GB Manufacturing**.
+## Overview
 
-- **Primary Architecture:** N-Layered (Presentation → Service → Repository → Domain)
-- **Complementary Architecture:** Event-Driven (Kafka)
-- **Tech Stack:**
-    - Java 17
-    - Spring Boot 3.3.x
-    - Maven
-    - H2 (dev) → MySQL (prod)
-    - Kafka
-    - OpenAPI (springdoc)
-    - Actuator
+ToolVault is a full-stack microservices application designed to streamline tool and equipment inventory management for construction companies. Built solo using an AI-first development approach with GitHub CoPilot, ToolVault demonstrates production-pattern architecture across seven independent services — containerized with Docker and backed by persistent MySQL.
+
+**Key capabilities:**
+- JWT authentication with role-based access control
+- Real-time asset check-in / check-out tracking
+- AI-powered forecasting that predicts shortages and suggests reorder quantities
+- Low stock alerting and transfer request management
+- Persistent refresh token system with one-time-use rotation
+- Swagger/OpenAPI documentation across all services
 
 ---
 
-## 📂 Repository Structure
+## Architecture
+
 ```
-toolvault_full/
-├── pom.xml                        # Parent POM
-├── common-lib/                    # Shared DTOs, Events, Enums, Crypto stub
-├── identity-service/              # RBAC, MFA (skeleton)
-├── depot-ops-service/             # Equipment check-in/out (skeleton)
-├── warehouse-ops-service/         # Inventory, transfers, low-stock (skeleton)
-├── procurement-service/           # Automated ordering (skeleton)
-├── reporting-service/             # Audit/usage (skeleton)
-├── notification-service/          # Alerts consumers (skeleton)
-├── docker-compose.yml             # MySQL + Kafka for local infra (optional)
-└── .github/workflows/ci.yml       # GitHub Actions CI
+React Frontend (Port 3000)
+        │
+        │ JWT Bearer Token
+        ▼
+┌─────────────────────────────────────────────┐
+│              Spring Boot Services            │
+├──────────────┬──────────────┬───────────────┤
+│   Identity   │  Depot Ops   │  Warehouse    │
+│   :8081      │  :8082       │  Ops :8083    │
+│  Auth / JWT  │  Assets /    │  Stock /      │
+│              │  Forecasting │  Inventory    │
+├──────────────┼──────────────┼───────────────┤
+│  Procurement │ Notification │  Reporting    │
+│  :8084       │  :8086       │  :8085        │
+└──────────────┴──────────────┴───────────────┘
+        │
+        │ HikariCP Connection Pool
+        ▼
+   MySQL 8.4 (Docker Volume — persistent)
 ```
+
+**Tech stack:**
+- Java 17 — Spring Boot 3.3.5
+- Spring Security — JWT (HS256) + BCrypt
+- Spring Data JPA — Hibernate 6
+- MySQL 8.4 — H2 (local dev fallback)
+- Docker + Docker Compose
+- Maven multi-module build
+- Swagger / OpenAPI 3 (Springdoc)
+- React frontend (in progress)
 
 ---
 
-## 🚀 Quick Start
+## Services
 
-### **Prerequisites**
-- Java 17
+| Service | Port | Responsibility |
+|---|---|---|
+| `identity-service` | 8081 | Auth, JWT issuance, refresh token persistence |
+| `depot-ops-service` | 8082 | Asset tracking, checkout history, AI forecasting |
+| `warehouse-ops-service` | 8083 | Stock levels, restock, allocation |
+| `procurement-service` | 8084 | Purchase request management |
+| `notification-service` | 8086 | Email, SMS, event alerting |
+| `reporting-service` | 8085 | Analytics and summary reports |
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Java 17+
 - Maven 3.9+
-- IntelliJ IDEA (recommended)
+- Docker Desktop
 
-### **Build**
-```shell
-mvn clean install
+### Run with Docker
+
+```bash
+# Clone the repository
+git clone https://github.com/Z4kM4rm3l/CEIS400-Group7Project.git
+cd CEIS400-Group7Project
+
+# Build all services
+mvn clean package -DskipTests
+
+# Start the full stack
+docker-compose up --build
 ```
 
-### **Run a Service (Example: Identity)**
-```shell
-mvn -pl identity-service spring-boot:run
+MySQL databases are created automatically on first run via `scripts/init.sql`.
+
+### Environment Variables
+
+All secrets are injected via Docker Compose environment variables. For local development, services fall back to H2 in-memory databases — no configuration needed.
+
+For production, set the following in your environment or `.env` file:
+
 ```
-
----
-
-## ✅ Testing Instructions (Module-Level)
-
-### **1. Identity Service (RBAC, MFA skeleton)**
-**Goal:** Verify endpoints and security config allow Swagger/Actuator access.  
-Run:
-```shell
-mvn -pl identity-service test
-```
-**Tests to include:**
-- `IdentityControllerSmokeTest`: Assert `/swagger-ui.html` and `/actuator/health` return **200 OK**.
-- `SecurityConfigTest`: Ensure `permitAll()` for Swagger paths.
-
-**Manual Check:**  
-Visit [http://localhost:8081/swagger-ui.html](http://localhost:8081/swagger-ui.html) and confirm endpoints load.
-
----
-
-### **2. Depot Ops Service (Checkout/Check-in skeleton)**
-**Goal:** Validate controller stubs and domain mapping.  
-Run:
-```shell
-mvn -pl depot-ops-service test
-```
-**Tests to include:**
-- `DepotControllerSmokeTest`: Assert `/checkout` and `/checkin` return **501 Not Implemented**.
-- `EntityMappingTest`: Validate JPA entity fields exist (e.g., Equipment, Badge).
-
-**Manual Check:**
-```shell
-curl -X POST http://localhost:8082/checkout
+SPRING_DATASOURCE_URL=jdbc:mysql://...
+SPRING_DATASOURCE_USERNAME=...
+SPRING_DATASOURCE_PASSWORD=...
+JWT_SECRET=...
+JWT_ISSUER=...
+JWT_ACCESS_EXP_MIN=15
 ```
 
 ---
 
-### **3. Warehouse Ops Service (Inventory skeleton)**
-**Goal:** Confirm inventory endpoints and entity persistence.  
-Run:
-```shell
-mvn -pl warehouse-ops-service test
+## API Highlights
+
+### Authentication
+
+```bash
+# Register
+POST /auth/register
+{ "firstName": "...", "lastName": "...", "email": "...", "password": "..." }
+
+# Login
+POST /auth/login
+{ "email": "...", "password": "..." }
+
+# Refresh token (one-time use rotation)
+POST /auth/refresh
+{ "refreshToken": "uuid-here" }
 ```
-**Tests to include:**
-- `WarehouseControllerSmokeTest`: `/inventory` and `/transfer` return **501**.
-- `RepositoryIntegrationTest`: Use H2 to persist `InventoryItem` and assert retrieval.
 
----
+### Forecasting
 
-### **4. Procurement Service**
-**Goal:** Validate order endpoint stub.  
-Run:
-```shell
-mvn -pl procurement-service test
+```bash
+# Checkout frequency by tool model (last 30 days)
+GET /forecasting/frequency
+
+# Tools at risk of shortage
+GET /forecasting/risk
+
+# AI-generated reorder suggestions
+GET /forecasting/reorder
 ```
-**Tests to include:**
-- `ProcurementControllerSmokeTest`: `/order` returns **501**.
 
----
+### Inventory
 
-### **5. Reporting Service**
-**Goal:** Validate audit and usage endpoints.  
-Run:
-```shell
-mvn -pl reporting-service test
-```
-**Tests to include:**
-- `ReportingControllerSmokeTest`: `/audit` and `/usage` return **501**.
+```bash
+# List all stock
+GET /warehouse/stock
 
----
+# Top 5 SKUs by quantity
+GET /warehouse/top-skus
 
-### **6. Notification Service**
-**Goal:** Validate `/ping` endpoint and Kafka consumer stubs.  
-Run:
-```shell
-mvn -pl notification-service test
-```
-**Tests to include:**
-- `NotificationControllerSmokeTest`: `/ping` returns **200 OK**.
-
----
-
-## ✅ Common Testing Setup
-- JUnit 5 for unit tests
-- Spring Boot Test for integration tests
-- **Future:** Testcontainers for MySQL + Kafka event-driven tests
-
----
-
-## 🔄 CI/CD Testing Integration
-Update `.github/workflows/ci.yml` to run module-specific tests:
-```yaml
-- name: Run module tests
-  run: mvn -pl identity-service,depot-ops-service,warehouse-ops-service,procurement-service,reporting-service,notification-service test
+# Check in / check out assets
+POST /depot/check-in
+POST /depot/check-out
 ```
 
 ---
 
-## 📈 Next Steps
-- Make one line run command to boot all modules at once
-- Polish end-point module integration
-- Add Kafka event tests using Testcontainers
-- Add security tests for JWT and MFA flows  
-  **
+## Security
+
+- Passwords hashed with BCrypt
+- JWTs signed with HMAC-SHA256
+- Refresh tokens stored in MySQL with expiry and one-time-use revocation
+- Role-based route protection (`USER`, `ADMIN`)
+- Custom 401/403 JSON error responses
+- Stateless session management
+
+---
+
+## Development Approach
+
+ToolVault was built using an **AI-first development methodology** — treating GitHub CoPilot as a primary development partner rather than an autocomplete tool. Architectural decisions, service boundaries, security patterns, and business logic were directed by the developer; CoPilot handled syntax generation and boilerplate.
+
+This approach mirrors the emerging discipline of agentic software development — where human judgment guides AI execution to ship production-quality systems faster.
+
+---
+
+## Author
+
+**Zakary Marmel**
+- BAS Software Design — GPA 3.93, Dean's List
+- AAS Information Technology & Networking — With Honors
+- [LinkedIn](https://www.linkedin.com/in/zak-marmel/)
+- [GitHub](https://github.com/Z4kM4rm3l)
+
+---
+
+*Built with Java, Spring Boot, Docker, and AI-first development practices.*
