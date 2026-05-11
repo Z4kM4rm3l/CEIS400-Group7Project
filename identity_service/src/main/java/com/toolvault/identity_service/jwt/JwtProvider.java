@@ -12,6 +12,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.Key;
 import java.time.Instant;
 import java.util.Date;
+import java.util.UUID;
 
 @Component
 public class JwtProvider {
@@ -31,6 +32,9 @@ public class JwtProvider {
       .claim("email", email).claim("role", role)
       .signWith(key, SignatureAlgorithm.HS256).compact();
   }
+    public String issueRefreshToken() {
+        return java.util.UUID.randomUUID().toString();
+    }
   public Jws<Claims> parse(String token) {
     return Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token);
   }
